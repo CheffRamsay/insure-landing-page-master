@@ -5,7 +5,7 @@ footer{
     flex-direction: column;
     padding-top: 90px;
     margin-top: 140px;
-    background-image: url("/images/bg-pattern-footer-mobile.svg");
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
     background-repeat: no-repeat;
     background-position: top left;
     background-color: #FAFAFA;
@@ -73,7 +73,7 @@ footer{
 @media (min-width: 1000px) {
     footer{
         padding: $margin-desktop;
-        background-image: url("/images/bg-pattern-footer-desktop.svg");
+        background-image: url("../images/bg-pattern-footer-desktop.svg");
         .logo-links-container{
             width: 100%;
             display: flex;
