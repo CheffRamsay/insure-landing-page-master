@@ -1,0 +1,258 @@
+@import "funciones";
+main{
+    .intro-contain{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .img-family-mobile{
+            width: 100%;
+            display: block;
+        }
+        .img-family-desk{
+            display: none;
+        }
+        .text-container{
+            background-image: url("/images/bg-pattern-intro-left-mobile.svg"), url("/images/bg-pattern-intro-right-mobile.svg");
+            background-position: top left, right 350px;
+            background-color: $Dark-Violet;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 500px;
+            z-index: 9999999;
+            h1{
+                font-family: $font-DM;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 43px;
+                line-height: 45px;
+                text-align: center;
+                color: $white;
+                max-width: 360px;
+                padding-top: 0px;
+                margin-bottom: 33px;
+            } 
+            p{
+                font-family: $font-KARLA;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 21px;
+                text-align: center;
+                color: $white;
+                margin: 0px 0px 48px 0px;
+                max-width: 360px;
+            } 
+            #btn-you-insurance{
+                @include btn($trasparent, $white, $white);
+                &:hover{@include btn($white, $white, $Dark-Violet);}
+            }
+        }
+
+    }
+
+    .we-are-different{
+        padding-top: 140px;
+        background-image: url("/images/bg-pattern-intro-right-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: right -146px;
+        .line{
+            width: 150px;
+            height: 0.3px;
+            background-color: $Grayish-Blue;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        h1{
+            font-family: $font-DM;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 60px;
+            color: $black;
+            text-align: center;
+            margin:  0 auto;
+            padding-bottom: 40px;
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 60px;
+            img{
+                width: 86px;
+                height: 86px;
+                position: relative;
+                top: 10px;
+            }
+            h4{
+                font-family: $font-DM;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 60px;
+                color: $black;
+                margin-bottom: 0px;
+            }
+            p{
+                font-family: $font-KARLA;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 25px;
+                text-align: center;
+                color: $Very-Dark-Violet;
+                margin-top: 0px;
+                max-width: 360px;
+            }
+        }
+    } 
+
+    .find-out-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $Dark-Violet;
+        height: 344px;
+        background-image: url("/images/bg-pattern-intro-right-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 460px;
+        h1{
+            font-family: $font-DM;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 45px;
+            text-align: center;
+            color: $white;
+            max-width: 360px;
+            padding-top: 85px;
+        }
+        #btn-you-insurance{
+            margin-bottom: 78px;
+            padding: 9px 2px;
+            @include btn($trasparent, $white, $white);
+            &:hover{@include btn($white, $white, $Dark-Violet);}
+        }
+    } 
+}
+
+@media (min-width: 1000px) {
+    main{
+        .background-intro{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image:url("/images/bg-pattern-intro-right-desktop.svg");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 400px;
+            z-index: 2;
+         }
+        .intro-contain{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            background-color: $Dark-Violet;
+            background-image: url("/images/bg-pattern-intro-left-desktop.svg");
+            background-repeat: no-repeat;
+            background-position: left 378px, right;
+            background-size: auto, 401px;
+            .img-family-mobile{
+                display: none;
+            }
+           .img-family-desk{
+                display: block;
+                width: 45%;
+                height: 75%;
+                position: relative;
+                top: 105px;
+                z-index: 0;
+            }
+           .text-container{
+                padding: 0px;
+                align-items: flex-start;
+                justify-content: center;
+                background-image: none;
+                position: relative;
+                top:40px;
+                background-color: transparent;
+               .line-text{
+                    width: 155px;
+                    height: 1px;
+                    background-color: $Very-Light-Gray;
+                }
+                h1{
+                    text-align: left;
+                    font-size: 72px;
+                    max-width: 500px;
+                    line-height: 60px;
+                    margin-top: 50px;
+                }
+                p{
+                    text-align: left;
+                    font-size: 18px;
+                    max-width: 465px;
+                }
+                .button-container{
+                    width: 100%;
+                    .btn-you-insurance{
+                        position: relative;
+                        left: 0px;
+                    }
+                }
+            }
+        }
+        
+        .we-are-different{
+            background-image: none;
+            padding-top: 300px;
+            .line{
+                margin: 50px 0;
+                width: 150px;
+            }
+            h1{
+                padding-bottom: 80px;
+                font-size: 72px;
+                text-align: left;
+            }
+            .cards{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .card{
+                    align-items: flex-start;
+                    p{
+                        text-align: left;
+                        max-width: 320px;
+                    }
+                }
+            }  
+        }
+
+        .find-out-container{
+            height: 250px;
+            padding: 0px 80px 0px 80px;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 100px;
+            h1{
+                margin: 0;
+                max-width: 500px;
+                line-height: 60px;
+                padding-top:80px;
+                font-size: 56px;
+            }
+            #btn-you-insurance{
+                margin-bottom: 0px;
+                min-width: 150px;
+            }
+        }
+    }
+    
+}

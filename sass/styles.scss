@@ -1,0 +1,92 @@
+@import "variables";
+@import "funciones";
+@import "menu";
+@import "header";
+@import "main";
+@import "footer";
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@300;400;500;600&display=swap');
+
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+header,.text-container, .we-are-different{
+    padding: $margin-mobile;
+}
+
+#btn-header{
+    @include btn($trasparent, $white, $white);
+    &:hover{
+    @include btn($black, $black, $Very-Light-Gray);
+    }
+}
+
+@media (min-width: 1000px) {
+
+    header,.intro-contain, .we-are-different{
+        padding: $margin-desktop;
+    }
+    body{
+        background-image: url("/images/bg-pattern-intro-left-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: left 460px;
+        .nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+            ul{
+              list-style: none;
+              li{
+                  position: relative;
+                  display: block;
+                  top: 0px;
+                  padding-top: 0px;
+                  background-color: transparent;
+                  background-image: none;
+                }a{
+                padding-right:30px;
+                font-family: $font-KARLA;
+                text-decoration: none;
+                color: $Dark-Grayish-Violet;
+                font-weight: bold;
+                transition: all 200ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+
+                &:hover{
+                 color: $Dark-Violet;
+                }
+              }  
+            } 
+        } 
+    }
+
+  
+
+    #btn-header{
+        @include btn($trasparent, $black, $black);
+        &:hover{
+        @include btn($black, $black, $Very-Light-Gray);
+        }
+    }
+
+ 
+    
+ 
+}
+
