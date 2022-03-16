@@ -24,8 +24,8 @@
   position: absolute;
   right: 25px;
   visibility: hidden;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
 
 .visible {
@@ -50,15 +50,15 @@ header .nav {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  height: 80px;
 }
 header .nav .logo {
-  width: 138px;
-  height: 24px;
+  width: 112px;
+  height: 18px;
 }
 header .nav .icon-hamburguer {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 header .nav ul li {
@@ -67,35 +67,34 @@ header .nav ul li {
   padding-top: 40px;
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 55px;
+  gap: 40px;
   background-color: #2b272f;
   background-image: url("../images/bg-pattern-mobile-nav.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
   z-index: 999999999;
-  font-size: 28px;
 }
 header .nav a {
   font-family: "Karla", sans-serif;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 20px;
   color: white;
   font-weight: bold;
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   /* ease-in-out */
 }
 header .nav #btn-header {
-  width: 80%;
-  height: 60px;
+  width: 90%;
+  height: 50px;
   font-family: "Karla", sans-serif;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 20px;
   background-color: #00000000;
   border-color: white;
   border-style: solid;
@@ -104,6 +103,39 @@ header .nav #btn-header {
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
+@media (min-width: 1000px) {
+  header .nav ul li a {
+    font-size: 16px;
+  }
+  header .nav ul li #btn-header {
+    width: 145px;
+    height: 38px;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #00000000;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    /* ease-in-out */
+  }
+  header .nav ul li #btn-header:hover {
+    width: 145px;
+    height: 38px;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    color: #fafafa;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    /* ease-in-out */
+  }
+}
 main .intro-contain {
   display: flex;
   flex-direction: column;
