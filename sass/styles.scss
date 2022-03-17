@@ -78,12 +78,7 @@ header,.text-container, .we-are-different{
 
   
 
-    #btn-header{
-        @include btn($trasparent, $black, $black);
-        &:hover{
-        @include btn($black, $black, $Very-Light-Gray);
-        }
-    }
+   
 
  
     

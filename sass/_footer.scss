@@ -35,22 +35,22 @@ footer{
         display: none;
     }
     .text-footer-container{
+
+        p{
+            font-family: $font-KARLA;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 16px;
+            text-align: center;
+            padding-bottom: 40px;
+            color: #00000070;
+         }
         ul{
             display: flex;
             justify-content: center;
             flex-direction: column;
             padding: 0;
-            p{
-                font-family: $font-KARLA;
-                font-style: normal;
-                font-weight: 800;
-                font-size: 20px;
-                line-height: 16px;
-                text-align: center;
-                padding-bottom: 40px;
-                color: #00000070;
-             }
-
             li{
                 text-align: center;
                 list-style-type: none;
@@ -106,13 +106,14 @@ footer{
            justify-content: flex-start;
            align-items: flex-start;
            gap: 18%;
+           p{
+            font-size: 13px;
+            padding-bottom: 18px;
+        }
            ul{
                align-items: flex-start;
                min-width: 113px;
-                p{
-                    font-size: 13px;
-                    padding-bottom: 18px;
-                }
+               
                 li{
                     padding-bottom: 10px;
                     a{
